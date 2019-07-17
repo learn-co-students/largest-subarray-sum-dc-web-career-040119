@@ -3,10 +3,9 @@ const largestSubarraySum = (arr) => {
 
     arr.forEach((n, i) => {
         let currentSum = n
+
         arr.slice(i + 1).forEach((x) => {
-            if (currentSum > largestSum) {
-                largestSum = currentSum
-            }
+            if (currentSum > largestSum) { largestSum = currentSum }
             currentSum += x
         })
     })
